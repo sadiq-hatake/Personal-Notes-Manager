@@ -10,3 +10,10 @@ class NoteTestCase(TestCase):
     def test_note_content(self):
         note = Note.objects.get(title="Test Note")
         self.assertEqual(note.content, "Some content")
+        
+def test_user_specific_notes(self):
+    other_user = User.objects.create_user(username='other', password='pass')
+    Note.objects.create(title="Other Note", content="Other content", user=other_user)
+    notes = Note.objects.filter(user=self.user)
+    self.assertEqual(notes.count(), 1)
+

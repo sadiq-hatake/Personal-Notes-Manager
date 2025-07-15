@@ -1,0 +1,51 @@
+body {
+  background-color: #FAF3E0;
+  font-family: 'Nunito', sans-serif;
+  color: #3E2723;
+}
+
+.navbar {
+  background-color: #6f4e37; /* pick your brown or maroon-like color here */
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #f8f9fa !important; /* light text */
+}
+
+.navbar-nav .nav-link {
+  color: #f8f9fa !important;
+}
+
+.btn-primary {
+  background-color: #6f4e37; /* your brown */
+  border: none;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #8b5e48;
+}
+
+.btn-outline-danger {
+  color: #6f4e37;
+  border-color: #6f4e37;
+}
+
+.btn-outline-danger:hover {
+  background-color: #6f4e37;
+  color: #fff;
+}
+
+
+.card {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(243, 181, 110, 0.05);
+  background-color: #fffaf5; /* slightly off-white for contrast */
+}
+
+.form-control {
+  border-radius: 0.5rem;
+}

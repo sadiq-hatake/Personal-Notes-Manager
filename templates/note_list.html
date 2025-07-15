@@ -1,25 +1,24 @@
 {% extends 'base.html' %}
-<form method="get" class="mb-3">
-  <input type="text" name="q" class="form-control" placeholder="Search notes..." value="{{ request.GET.q }}">
-</form>
-
 {% block content %}
+<div class="text-center mb-4">
+  <h2>Your Notes</h2>
+  <p class="lead">Capture your thoughts and ideas in one place.</p>
+  <a href="{% url 'note_create' %}" class="btn btn-primary mt-3">+ Add New Note</a>
+</div>
 
-  <div class="row">
+<div class="row">
   {% for note in notes %}
     <div class="col-md-4 mb-4">
-      <div class="card h-100">
-        <div class="card-body">
-          <h5 class="card-title">{{ note.title }}</h5>
-          <p class="card-text">{{ note.content|truncatechars:100 }}</p>
-          <a href="{% url 'note_update' note.pk %}" class="btn btn-primary btn-sm">Edit</a>
-          <a href="{% url 'note_delete' note.pk %}" class="btn btn-danger btn-sm">Delete</a>
-        </div>
+      <div class="card p-3">
+        <h5>{{ note.title }}</h5>
+        <p>{{ note.content|truncatewords:20 }}</p>
+        <a href="{% url 'note_update' note.pk %}" class="btn btn-primary w-100 mb-2">Edit</a>
+        <a href="{% url 'note_delete' note.pk %}" class="btn btn-outline-danger w-100">Delete</a>
+
       </div>
     </div>
   {% empty %}
-    <p>No notes found.</p>
+    <p class="text-center">No notes found. Click above to create your first note!</p>
   {% endfor %}
 </div>
-
 {% endblock %}
