@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 from decouple import config
+import os
+
 
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool)
@@ -30,7 +32,8 @@ SECRET_KEY = 'django-insecure-7rrdac3e-+ra92o4!q5qtzh!dr7b9y^flf-p1msnw5gszx1^8*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
 
 
 # Application definition
@@ -136,5 +139,6 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = '/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
