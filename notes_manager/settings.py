@@ -15,7 +15,7 @@ from decouple import config
 import os
 
 
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = config('SECRET_KEY', default='your-default-secret-key')
 DEBUG = config('DEBUG', cast=bool)
 
 
