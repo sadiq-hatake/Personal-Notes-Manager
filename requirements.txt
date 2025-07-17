@@ -96,4 +96,5 @@ uvicorn==0.35.0
 virtualenv==20.26.3
 watchdog==6.0.0
 wheel==0.44.0
+whitenoise==6.9.0
 zstandard==0.23.0
