@@ -16,7 +16,8 @@ import os
 
 
 SECRET_KEY = config('SECRET_KEY', default='your-default-secret-key')
-DEBUG = config('DEBUG', cast=bool)
+DEBUG = config('DEBUG', default=False, cast=bool)
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
