@@ -3,7 +3,7 @@
 A **Personal Notes Management Web Application** built with Django.  
 This project allows users to **sign up, log in, and securely manage their personal notes** online — including creation, editing, and deletion of notes.
 
-🚀 Live Demo: [Click to View on Render](https://your-app-name.onrender.com)
+🚀 Live Demo: [Click to View on Render](https://personal-notes-manager-btv6.onrender.com/login/)
 
 ---
 
